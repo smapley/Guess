@@ -16,7 +16,6 @@ public abstract class BaseApplication extends Application {
 
     //以键值对的形式存储用户名和密码
     public SharedPreferences sp_user;
-    public SharedPreferences sp_set;
 
     @Override
     public void onCreate() {
@@ -31,7 +30,6 @@ public abstract class BaseApplication extends Application {
 
         //初始化键值对存储
         sp_user = getSharedPreferences(MyData.SP_USER, MODE_PRIVATE);
-        sp_set = getSharedPreferences(MyData.SP_SET, MODE_PRIVATE);
     }
 
     public abstract BaseExceptionHandler getDefaultUncaughtExceptionHandler();
