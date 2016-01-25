@@ -1,24 +1,28 @@
 package com.smapley.guess.http.callback;
 
-import com.smapley.guess.http.MyResponse;
-import com.smapley.guess.utils.MyData;
+import android.widget.Toast;
+
+import com.smapley.guess.R;
+import com.smapley.guess.application.LocalApplication;
 
 import org.xutils.common.Callback;
+import org.xutils.common.util.LogUtil;
 
 /**
  * Created by smapley on 15/12/18.
  */
-public abstract class SimpleCallback implements Callback.CommonCallback<MyResponse> {
+public abstract class SimpleCallback implements Callback.CommonCallback<String> {
+
+
     @Override
-    public void onSuccess(MyResponse result) {
-        if(result.flag.equals(MyData.SUCC)){
-            onSuccess(result.data);
-        }
+    public void onSuccess(String result) {
+        Success(result);
+        LogUtil.d(result);
     }
 
     @Override
     public void onError(Throwable ex, boolean isOnCallback) {
-
+        Toast.makeText(LocalApplication.getInstance(), R.string.internet_err,Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -32,5 +36,5 @@ public abstract class SimpleCallback implements Callback.CommonCallback<MyRespon
     }
 
 
-    public abstract void onSuccess(String data);
+    public abstract void Success(String data);
 }

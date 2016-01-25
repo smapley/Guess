@@ -39,7 +39,7 @@ public abstract class NoteListService {
         params.addBodyParameter("time", refresh.getNoteList() + "");
         x.http().post(params, new SimpleCallback() {
             @Override
-            public void onSuccess(final String data) {
+            public void Success(final String data) {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {

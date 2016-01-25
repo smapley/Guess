@@ -18,12 +18,13 @@ public class ThreadSleep {
 
     }
 
-    public boolean ismIsLoops() {
-        return mIsLoops;
+    public ThreadSleep isLoop() {
+        this.mIsLoops = true ;
+        return this;
     }
 
-    public void setmIsLoops(boolean mIsLoops) {
-        this.mIsLoops = mIsLoops;
+    public void stop(){
+        this.mIsLoops=false;
     }
 
     public void sleep(final long time, Callback callback) {
@@ -39,7 +40,7 @@ public class ThreadSleep {
                         e.printStackTrace();
                     }
                     mhandler.obtainMessage(SLEEP).sendToTarget();
-                    if (mIsLoops == false)
+                    if (!mIsLoops)
                         return;
                 }
             }
@@ -53,13 +54,13 @@ public class ThreadSleep {
             switch (msg.what) {
                 case SLEEP:
                     mNumber++;
-                    mcallback.onCallback(mNumber);
+                    mcallback.onCallback(ThreadSleep.this,mNumber);
                     break;
             }
         }
     };
 
     public interface Callback {
-        void onCallback(int number);
+        void onCallback(ThreadSleep threadSleep,int number);
     }
 }

@@ -17,8 +17,7 @@ public class MyData {
     public static final String File_Log_Crash = File_Log + "/crash.log";
     public static final String File_Audio = "/audio";
 
-//        private final static String BASE_URL = "http://115.28.213.161:8080/PowerWorkService/";
-    private final static String BASE_URL = "http://192.168.2.1:8080/PowerWorkService/";
+    private final static String BASE_URL = "http://120.25.208.188/moni/";
     public final static String URL_PIC = BASE_URL + "upload/pic/";
     public final static String URL_File = BASE_URL + "upload/file/";
     public final static String URL_LOGIN = BASE_URL + "Login";
@@ -41,5 +40,9 @@ public class MyData {
     public final static String URL_MessageList = BASE_URL + "MessageList";
     public final static String URL_ProUseList = BASE_URL + "ProUseList";
     public final static String URL_JoinProject = BASE_URL + "JoinProject";
+
+
+    public final static String URL_sendSMS=BASE_URL+"sendSMS.php";
+    public final static String URL_reg1=BASE_URL+"reg1.php";
 
 }

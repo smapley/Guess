@@ -1,8 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/log_ll_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scene"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.bignerdranch.android.transitionexample.TransitionFragment">
 
-</LinearLayout>
+
+    <com.smapley.guess.view.CircleImageView
+        android:id="@+id/log_ci_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/logo"/>
+
+    <EditText
+        android:id="@+id/log_et_username"
+        style="@style/log_ev"
+        android:layout_below="@+id/log_ci_pic"
+        android:hint="@string/log_et_username"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:id="@+id/log_ll_send"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/log_et_username"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/log_et_password"
+            style="@style/log_ev"
+            android:layout_width="0dp"
+            android:hint="@string/log_et_password"
+            android:inputType="number"
+            android:layout_weight="1"
+            android:layout_marginEnd="0dp"/>
+        <Button
+            android:id="@+id/log_bt_send"
+            style="@style/log_bt"
+            android:layout_width="0dp"
+            android:onClick="checkMes"
+            android:text="@string/send"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/log_bt_submit"
+        style="@style/log_bt"
+        android:layout_below="@+id/log_ll_send"
+        android:layout_centerHorizontal="true"
+        android:onClick="checkLogin"
+        android:text="@string/login" />
+
+
+</RelativeLayout>

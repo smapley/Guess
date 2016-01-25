@@ -223,7 +223,7 @@ public class PublishTask extends BaseActivity {
                 TaskService.save(taskMode);
                 new ThreadSleep().sleep(2000, new ThreadSleep.Callback() {
                     @Override
-                    public void onCallback(int number) {
+                    public void onCallback(ThreadSleep threadSleep,int number) {
                         ActivityStack.getInstance().finishActivity(PublishTask.class);
                         ActivityStack.getInstance().finishActivity(AddTask.class);
                     }
@@ -259,7 +259,7 @@ public class PublishTask extends BaseActivity {
 
                 new ThreadSleep().sleep(2000, new ThreadSleep.Callback() {
                     @Override
-                    public void onCallback(int number) {
+                    public void onCallback(ThreadSleep threadSleep,int number) {
                         ActivityStack.getInstance().finishActivity(PublishTask.class);
                         ActivityStack.getInstance().finishActivity(AddTask.class);
                     }

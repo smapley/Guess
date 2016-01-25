@@ -98,7 +98,7 @@ public class Projects extends BaseFragment {
                 getDataForDb();
                 new ThreadSleep().sleep(2000, new ThreadSleep.Callback() {
                     @Override
-                    public void onCallback(int number) {
+                    public void onCallback(ThreadSleep threadSleep,int number) {
                         Intent intent = new Intent(getActivity(), Project.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("pro_id", projectMode.getProjectEntity().getPro_id());

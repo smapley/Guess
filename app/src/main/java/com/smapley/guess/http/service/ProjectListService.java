@@ -39,7 +39,7 @@ public abstract class ProjectListService {
         params.addBodyParameter("time", refresh.getProjectList() + "");
         x.http().post(params, new SimpleCallback() {
             @Override
-            public void onSuccess(final String data) {
+            public void Success(final String data) {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {

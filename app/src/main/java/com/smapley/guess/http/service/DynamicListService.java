@@ -40,7 +40,7 @@ public abstract class DynamicListService {
         params.addBodyParameter("pro_id", pro_id + "");
         x.http().post(params, new SimpleCallback() {
             @Override
-            public void onSuccess(final String data) {
+            public void Success(final String data) {
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
