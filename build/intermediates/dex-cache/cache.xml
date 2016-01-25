@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/smapley/Desktop/PowerWork/app/libs/pushservice-4.6.0.53.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f62a3054196e5ef23ac29f159863e3f657e92cfc">
+        <dex dex="/Users/smapley/Desktop/PowerWork/app/build/intermediates/pre-dexed/debug/pushservice-4.6.0.53-7ac190c094bda9d76e2ba821cd1585b133f478f2.jar" />
+    </item>
+
+</items>

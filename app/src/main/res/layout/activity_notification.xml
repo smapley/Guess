@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_lin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/notification_cart"
+            android:text="@string/not_tv_type" />
+
+
+        <CheckBox
+            android:id="@+id/not_cb_type1"
+            style="@style/notification_checkbox"
+            android:text="@string/not_tv_type1" />
+
+        <CheckBox
+            android:id="@+id/not_cb_type2"
+            style="@style/notification_checkbox"
+            android:text="@string/not_tv_type2" />
+
+        <CheckBox
+            android:id="@+id/not_cb_type3"
+            style="@style/notification_checkbox"
+            android:text="@string/not_tv_type3" />
+
+
+        <TextView
+            style="@style/notification_cart"
+            android:layout_marginTop="10dp"
+            android:paddingLeft="0dp"
+            android:text="@string/not_tv_info" />
+
+        <CheckBox
+            android:id="@+id/not_cb_info1"
+            style="@style/notification_checkbox"
+            android:text="@string/not_tv_info1" />
+
+
+    </LinearLayout>
+</LinearLayout>

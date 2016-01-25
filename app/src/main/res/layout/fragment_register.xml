@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scene"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.bignerdranch.android.transitionexample.TransitionFragment">
+
+
+    <EditText
+        android:id="@+id/log_et_username"
+        style="@style/log_ev"
+        android:hint="@string/log_et_username"
+        android:layout_marginTop="95dp"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/log_et_password"
+        style="@style/log_ev"
+        android:layout_below="@+id/log_et_username"
+        android:hint="@string/log_et_password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/log_et_phone"
+        style="@style/log_ev"
+        android:layout_below="@+id/log_et_password"
+        android:hint="@string/log_et_phone"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/log_bt_register"
+        style="@style/log_bt"
+        android:layout_below="@+id/log_et_phone"
+        android:layout_centerHorizontal="true"
+        android:onClick="checkRegister"
+        android:text="@string/log_bt_register" />
+
+    <Button
+        android:id="@+id/log_bt_submit"
+        style="@style/log_bt"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="goToScene1"
+        android:text="@string/login" />
+</RelativeLayout>
