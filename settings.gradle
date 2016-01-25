@@ -1,1 +1,1 @@
-include ':app', ':dialog', ':image-selector', ':datetimepicker-library'
+include ':app'

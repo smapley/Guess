@@ -67,9 +67,6 @@ public class Login extends BaseActivity {
 
     @Override
     protected void initParams() {
-        if (userBaseEntity != null) {
-            log_st_usernmae = userBaseEntity.getUsername();
-        }
         initView();
     }
 

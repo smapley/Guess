@@ -41,55 +41,9 @@
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name="com.smapley.guess.activity.Test"
-            android:label="@string/acc_dialog_ok" />
-        <activity
-            android:name="com.smapley.guess.activity.Feedback"
-            android:windowSoftInputMode="stateVisible"
-            android:label="@string/feedback" />
-        <activity
-            android:name="com.smapley.guess.activity.AboutUs"
-            android:label="@string/aboutus" />
-        <activity
-            android:name="com.smapley.guess.activity.Setting"
-            android:label="@string/setting" />
-        <activity
-            android:name="com.smapley.guess.activity.Notification"
-            android:label="@string/notification" />
-        <activity
-            android:name="com.smapley.guess.activity.Account"
-            android:label="@string/account"
-            android:windowSoftInputMode="stateHidden"/>
-        <activity
-            android:name="com.smapley.guess.activity.AddTask"
-            android:label="@string/add"
-            android:windowSoftInputMode="stateVisible"/>
-        <activity android:name="com.smapley.guess.activity.PublishTask"/>
-        <activity
             android:name="com.smapley.guess.activity.Login"
             android:label="@string/login"
             android:windowSoftInputMode="stateVisible|adjustPan" />
-        <activity
-            android:name="com.smapley.guess.activity.Achievement"
-            android:label="@string/achievement" />
-        <activity
-            android:name="com.smapley.guess.activity.NoteList"
-            android:label="@string/notes" />
-        <activity
-            android:name="com.smapley.guess.activity.TaskList"
-            android:label="@string/task" />
-        <activity
-            android:name="com.smapley.guess.activity.Project"
-            android:label="@string/project" />
-        <activity
-            android:name="com.smapley.guess.activity.Add"
-            android:label="@string/add"
-            android:windowSoftInputMode="stateVisible"/>
-        <activity
-            android:name="com.smapley.guess.activity.Search"
-            android:label="@string/search"
-            android:windowSoftInputMode="stateVisible"/>
-        <activity android:name="com.smapley.guess.activity.Task"/>
 
 
     </application>
