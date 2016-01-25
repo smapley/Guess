@@ -65,7 +65,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="15dp">
 
-            <com.smapley.powerwork.view.CircleImageView
+            <com.smapley.guess.view.CircleImageView
                 android:id="@+id/adapter_pro_item1_iv_durl"
                 android:layout_width="40dp"
                 android:layout_height="40dp"

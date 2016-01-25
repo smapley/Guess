@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.smapley.powerwork">
+    package="com.smapley.guess">
 
 
     <!--读写SD卡权限-->
@@ -18,31 +18,9 @@
     <!-- 录音权限 -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <!-- Push service 运行需要的权限 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
-    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
-
-
-
-    <!--屏幕支持-->
-    <supports-screens
-        android:anyDensity="true"
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:smallScreens="true" />
-
 
     <application
-        android:name=".application.LocalApplication"
+        android:name="com.smapley.guess.application.LocalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
@@ -50,7 +28,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.Welcome"
+            android:name="com.smapley.guess.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name">
             <intent-filter>
@@ -59,117 +37,61 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"/>
         <activity
             android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name=".activity.Test"
+            android:name="com.smapley.guess.activity.Test"
             android:label="@string/acc_dialog_ok" />
         <activity
-            android:name=".activity.Feedback"
+            android:name="com.smapley.guess.activity.Feedback"
             android:windowSoftInputMode="stateVisible"
             android:label="@string/feedback" />
         <activity
-            android:name=".activity.AboutUs"
+            android:name="com.smapley.guess.activity.AboutUs"
             android:label="@string/aboutus" />
         <activity
-            android:name=".activity.Setting"
+            android:name="com.smapley.guess.activity.Setting"
             android:label="@string/setting" />
         <activity
-            android:name=".activity.Notification"
+            android:name="com.smapley.guess.activity.Notification"
             android:label="@string/notification" />
         <activity
-            android:name=".activity.Account"
+            android:name="com.smapley.guess.activity.Account"
             android:label="@string/account"
             android:windowSoftInputMode="stateHidden"/>
         <activity
-            android:name=".activity.AddTask"
+            android:name="com.smapley.guess.activity.AddTask"
             android:label="@string/add"
             android:windowSoftInputMode="stateVisible"/>
-        <activity android:name=".activity.PublishTask"/>
+        <activity android:name="com.smapley.guess.activity.PublishTask"/>
         <activity
-            android:name=".activity.Login"
+            android:name="com.smapley.guess.activity.Login"
             android:label="@string/login"
             android:windowSoftInputMode="stateVisible|adjustPan" />
         <activity
-            android:name=".activity.Achievement"
+            android:name="com.smapley.guess.activity.Achievement"
             android:label="@string/achievement" />
         <activity
-            android:name=".activity.NoteList"
+            android:name="com.smapley.guess.activity.NoteList"
             android:label="@string/notes" />
         <activity
-            android:name=".activity.TaskList"
+            android:name="com.smapley.guess.activity.TaskList"
             android:label="@string/task" />
         <activity
-            android:name=".activity.Project"
+            android:name="com.smapley.guess.activity.Project"
             android:label="@string/project" />
         <activity
-            android:name=".activity.Add"
+            android:name="com.smapley.guess.activity.Add"
             android:label="@string/add"
             android:windowSoftInputMode="stateVisible"/>
         <activity
-            android:name=".activity.Search"
+            android:name="com.smapley.guess.activity.Search"
             android:label="@string/search"
             android:windowSoftInputMode="stateVisible"/>
-        <activity android:name=".activity.Task"/>
+        <activity android:name="com.smapley.guess.activity.Task"/>
 
 
-        <!-- 4.6版本新增的Activity声明，提升Push后台存活率 -->
-        <activity
-            android:name="com.baidu.android.pushservice.PushKeepAlive"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-
-        <!-- push service start -->
-        <!-- 用于接收系统消息以保证PushService正常运行 -->
-        <receiver android:name="com.baidu.android.pushservice.PushServiceReceiver"
-            android:process=":bdservice_v1" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
-                <action android:name="com.baidu.android.pushservice.action.notification.SHOW" />
-                <action android:name="com.baidu.android.pushservice.action.media.CLICK" />
-                <!-- 以下四项为可选的action声明，可大大提高service存活率和消息到达速度 -->
-                <action android:name="android.intent.action.MEDIA_MOUNTED" />
-                <action android:name="android.intent.action.USER_PRESENT" />
-                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
-                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
-            </intent-filter>
-        </receiver>
-        <!-- Push服务接收客户端发送的各种请求-->
-        <receiver android:name="com.baidu.android.pushservice.RegistrationReceiver"
-            android:process=":bdservice_v1" >
-            <intent-filter>
-                <action android:name="com.baidu.android.pushservice.action.METHOD" />
-                <action android:name="com.baidu.android.pushservice.action.BIND_SYNC" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.PACKAGE_REMOVED" />
-                <data android:scheme="package" />
-            </intent-filter>
-        </receiver>
-        <service android:name="com.baidu.android.pushservice.PushService" android:exported="true"
-            android:process=":bdservice_v1" >
-            <intent-filter >
-                <action android:name="com.baidu.android.pushservice.action.PUSH_SERVICE" />
-            </intent-filter>
-        </service>
-        <!-- 4.4版本新增的CommandService声明，提升小米和魅族手机上的实际推送到达率 -->
-        <service android:name="com.baidu.android.pushservice.CommandService"
-            android:exported="true" />
-        <!-- 此处Receiver名字修改为当前包名路径 -->
-        <receiver android:name=".receiver.PushReceiver">
-            <intent-filter>
-                <!-- 接收push消息 -->
-                <action android:name="com.baidu.android.pushservice.action.MESSAGE" />
-                <!-- 接收bind、setTags等method的返回结果-->
-                <action android:name="com.baidu.android.pushservice.action.RECEIVE" />
-                <!-- 接收通知点击事件，和通知自定义内容 -->
-                <action android:name="com.baidu.android.pushservice.action.notification.CLICK" />
-            </intent-filter>
-        </receiver>
     </application>
 
 </manifest>

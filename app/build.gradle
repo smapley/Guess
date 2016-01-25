@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
-        applicationId "com.smapley.powerwork"
+        applicationId "com.smapley.guess"
         minSdkVersion 19
         targetSdkVersion 23
         versionCode 1
@@ -29,5 +29,4 @@ dependencies {
     compile project(':image-selector')
     compile project(':datetimepicker-library')
     compile files('libs/fastjson-1.2.4.jar')
-    compile files('libs/pushservice-4.6.0.53.jar')
 }

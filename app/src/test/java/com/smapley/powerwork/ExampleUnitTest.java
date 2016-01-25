@@ -1,4 +1,4 @@
-package com.smapley.powerwork;
+package com.smapley.guess;
 
 import org.junit.Test;
 

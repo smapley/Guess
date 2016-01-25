@@ -21,7 +21,7 @@
             android:layout_centerVertical="true"
             android:orientation="vertical">
 
-            <com.smapley.powerwork.view.CircleImageView
+            <com.smapley.guess.view.CircleImageView
                 android:id="@+id/fee_iv_pic"
                 android:layout_width="100dp"
                 android:layout_height="100dp"

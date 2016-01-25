@@ -1,0 +1,33 @@
+package com.smapley.guess.db.modes;
+
+
+import com.smapley.guess.db.entity.ProUseEntity;
+import com.smapley.guess.db.entity.UserEntity;
+
+public class ProUseMode {
+
+	private ProUseEntity proUseEntity;
+	
+	private UserEntity userEntity;
+
+
+	
+	public ProUseEntity getProUseEntity() {
+		return proUseEntity;
+	}
+
+
+	public void setProUseEntity(ProUseEntity proUseEntity) {
+		this.proUseEntity = proUseEntity;
+	}
+
+
+	public UserEntity getUserEntity() {
+		return userEntity;
+	}
+
+	public void setUserEntity(UserEntity userEntity) {
+		this.userEntity = userEntity;
+	}
+
+}
