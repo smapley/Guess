@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/chose_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/chose_et_item"
+                android:layout_weight="1.5"
+                android:background="@null"
+                android:text="定"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chose_dao1"
+                style="@style/chose_et_item"
+                android:text="倒" />
+
+            <TextView
+                android:id="@+id/chose_dao2"
+                style="@style/chose_et_item"
+                android:text="倒" />
+
+            <TextView
+                android:id="@+id/chose_dao3"
+                style="@style/chose_et_item"
+                android:text="倒" />
+
+            <TextView
+                android:id="@+id/chose_dao4"
+                style="@style/chose_et_item"
+                android:text="倒" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/chose_item1_layout"
+                style="@style/chose_item_layout">
+
+                <TextView
+                    android:id="@+id/chose_item1"
+                    style="@style/chose_item" />
+
+                <TextView
+                    android:id="@+id/chose_item1_clo"
+                    style="@style/chose_item_clo"
+                    android:layout_toRightOf="@id/chose_item1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/chose_item2_layout"
+                style="@style/chose_item_layout">
+
+                <TextView
+                    android:id="@+id/chose_item2"
+                    style="@style/chose_item" />
+
+                <TextView
+                    android:id="@+id/chose_item2_clo"
+                    style="@style/chose_item_clo"
+                    android:layout_toRightOf="@id/chose_item2" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/chose_item3_layout"
+                style="@style/chose_item_layout">
+
+                <TextView
+                    android:id="@+id/chose_item3"
+                    style="@style/chose_item" />
+
+                <TextView
+                    android:id="@+id/chose_item3_clo"
+                    style="@style/chose_item_clo"
+                    android:layout_toRightOf="@id/chose_item3" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/chose_item4_layout"
+                style="@style/chose_item_layout">
+
+                <TextView
+                    android:id="@+id/chose_item4"
+                    style="@style/chose_item" />
+
+                <TextView
+                    android:id="@+id/chose_item4_clo"
+                    style="@style/chose_item_clo"
+                    android:layout_toRightOf="@id/chose_item4" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/chose_qian"
+                style="@style/chose_et_item"
+                android:text="仟" />
+
+            <TextView
+                android:id="@+id/chose_bai"
+                style="@style/chose_et_item"
+                android:text="佰" />
+
+            <TextView
+                android:id="@+id/chose_shi"
+                style="@style/chose_et_item"
+                android:text="拾" />
+
+            <TextView
+                android:id="@+id/chose_ge"
+                style="@style/chose_et_item"
+                android:text="个" />
+
+            <TextView
+                style="@style/chose_et_item"
+                android:background="@null"
+                android:text="合"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/chose_item5_layout"
+                style="@style/chose_item_layout"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8">
+
+
+                <TextView
+                    android:id="@+id/chose_item5"
+                    style="@style/chose_item" />
+
+                <TextView
+                    android:id="@+id/chose_item5_clo"
+                    style="@style/chose_item_clo"
+                    android:layout_toRightOf="@id/chose_item5" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/chose_qian2"
+                style="@style/chose_et_item"
+                android:text="仟" />
+
+            <TextView
+                android:id="@+id/chose_bai2"
+                style="@style/chose_et_item"
+                android:text="佰" />
+
+            <TextView
+                android:id="@+id/chose_shi2"
+                style="@style/chose_et_item"
+                android:text="拾" />
+
+            <TextView
+                android:id="@+id/chose_ge2"
+                style="@style/chose_et_item"
+                android:text="个" />
+
+            <TextView
+                style="@style/chose_et_item"
+                android:background="@null"
+                android:text="合"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/chose_item6_layout"
+                style="@style/chose_item_layout"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.8">
+
+
+                <TextView
+                    android:id="@+id/chose_item6"
+                    style="@style/chose_item" />
+
+                <TextView
+                    android:id="@+id/chose_item6_clo"
+                    style="@style/chose_item_clo"
+                    android:layout_toRightOf="@id/chose_item6" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+    </LinearLayout>
+
+</LinearLayout>

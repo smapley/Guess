@@ -30,20 +30,18 @@
         <activity
             android:name="com.smapley.guess.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
-            android:configChanges="orientation|screenSize" />
-        <activity
             android:name="com.smapley.guess.activity.Login"
             android:label="@string/login"
-            android:windowSoftInputMode="stateVisible|adjustPan" />
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            android:screenOrientation="landscape"/>
 
 
     </application>
