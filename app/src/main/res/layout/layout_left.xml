@@ -1,214 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/chose_back"
-        android:layout_width="match_parent"
+    android:background="@mipmap/background1"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp">
+        android:layout_weight="38.1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="@style/chose_et_item"
-                android:layout_weight="1.5"
-                android:background="@null"
-                android:text="定"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/chose_dao1"
-                style="@style/chose_et_item"
-                android:text="倒" />
-
-            <TextView
-                android:id="@+id/chose_dao2"
-                style="@style/chose_et_item"
-                android:text="倒" />
-
-            <TextView
-                android:id="@+id/chose_dao3"
-                style="@style/chose_et_item"
-                android:text="倒" />
-
-            <TextView
-                android:id="@+id/chose_dao4"
-                style="@style/chose_et_item"
-                android:text="倒" />
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:layout_centerVertical="true"
+            android:layout_margin="4dp"
+            android:src="@mipmap/tuima" />
 
-            <RelativeLayout
-                android:id="@+id/chose_item1_layout"
-                style="@style/chose_item_layout">
-
-                <TextView
-                    android:id="@+id/chose_item1"
-                    style="@style/chose_item" />
-
-                <TextView
-                    android:id="@+id/chose_item1_clo"
-                    style="@style/chose_item_clo"
-                    android:layout_toRightOf="@id/chose_item1" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/chose_item2_layout"
-                style="@style/chose_item_layout">
-
-                <TextView
-                    android:id="@+id/chose_item2"
-                    style="@style/chose_item" />
-
-                <TextView
-                    android:id="@+id/chose_item2_clo"
-                    style="@style/chose_item_clo"
-                    android:layout_toRightOf="@id/chose_item2" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/chose_item3_layout"
-                style="@style/chose_item_layout">
-
-                <TextView
-                    android:id="@+id/chose_item3"
-                    style="@style/chose_item" />
-
-                <TextView
-                    android:id="@+id/chose_item3_clo"
-                    style="@style/chose_item_clo"
-                    android:layout_toRightOf="@id/chose_item3" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/chose_item4_layout"
-                style="@style/chose_item_layout">
-
-                <TextView
-                    android:id="@+id/chose_item4"
-                    style="@style/chose_item" />
-
-                <TextView
-                    android:id="@+id/chose_item4_clo"
-                    style="@style/chose_item_clo"
-                    android:layout_toRightOf="@id/chose_item4" />
-            </RelativeLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:id="@+id/chose_qian"
-                style="@style/chose_et_item"
-                android:text="仟" />
-
-            <TextView
-                android:id="@+id/chose_bai"
-                style="@style/chose_et_item"
-                android:text="佰" />
-
-            <TextView
-                android:id="@+id/chose_shi"
-                style="@style/chose_et_item"
-                android:text="拾" />
-
-            <TextView
-                android:id="@+id/chose_ge"
-                style="@style/chose_et_item"
-                android:text="个" />
-
-            <TextView
-                style="@style/chose_et_item"
-                android:background="@null"
-                android:text="合"
-                android:textStyle="bold" />
-
-            <RelativeLayout
-                android:id="@+id/chose_item5_layout"
-                style="@style/chose_item_layout"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.8">
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:src="@mipmap/biaozhi" />
+    </RelativeLayout>
 
 
-                <TextView
-                    android:id="@+id/chose_item5"
-                    style="@style/chose_item" />
-
-                <TextView
-                    android:id="@+id/chose_item5_clo"
-                    style="@style/chose_item_clo"
-                    android:layout_toRightOf="@id/chose_item5" />
-            </RelativeLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:id="@+id/chose_qian2"
-                style="@style/chose_et_item"
-                android:text="仟" />
-
-            <TextView
-                android:id="@+id/chose_bai2"
-                style="@style/chose_et_item"
-                android:text="佰" />
-
-            <TextView
-                android:id="@+id/chose_shi2"
-                style="@style/chose_et_item"
-                android:text="拾" />
-
-            <TextView
-                android:id="@+id/chose_ge2"
-                style="@style/chose_et_item"
-                android:text="个" />
-
-            <TextView
-                style="@style/chose_et_item"
-                android:background="@null"
-                android:text="合"
-                android:textStyle="bold" />
-
-            <RelativeLayout
-                android:id="@+id/chose_item6_layout"
-                style="@style/chose_item_layout"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.8">
-
-
-                <TextView
-                    android:id="@+id/chose_item6"
-                    style="@style/chose_item" />
-
-                <TextView
-                    android:id="@+id/chose_item6_clo"
-                    style="@style/chose_item_clo"
-                    android:layout_toRightOf="@id/chose_item6" />
-            </RelativeLayout>
-        </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="164"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="400dp" />
+            android:layout_height="0dp"
+            android:layout_weight="2.8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="38.1">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="41.5"
+                android:scaleType="fitXY"
+                android:src="@mipmap/dao1s" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="38.5"
+                android:scaleType="fitXY"
+                android:src="@mipmap/dao2s" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="39.7"
+                android:scaleType="fitXY"
+                android:src="@mipmap/dao3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="40.1"
+                android:scaleType="fitXY"
+                android:src="@mipmap/dao3s" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.9" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="70.1">
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7.1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="36.9">
+
+            <ImageView
+                android:src="@mipmap/qian11"
+                style="@style/qian" />
+
+            <TextView style="@style/qiantv" />
+
+            <ImageView
+                android:src="@mipmap/bai11"
+                style="@style/bai" />
+
+            <TextView style="@style/baitv" />
+
+            <ImageView
+                android:src="@mipmap/shi1"
+                style="@style/shi" />
+
+            <TextView style="@style/shitv" />
+
+            <ImageView
+                android:src="@mipmap/ge11"
+                style="@style/ge" />
+
+            <TextView style="@style/getv" />
+
+            <ImageView
+                android:src="@mipmap/he"
+                style="@style/he" />
+
+            <TextView style="@style/hetv" />
+
+            <RelativeLayout style="@style/herlayout">
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="34.4">
+
+            <ImageView
+                android:src="@mipmap/qian11"
+                style="@style/qian" />
+
+            <TextView style="@style/qiantv" />
+
+            <ImageView
+                android:src="@mipmap/bai1"
+                style="@style/bai" />
+
+            <TextView style="@style/baitv" />
+
+            <ImageView
+                android:src="@mipmap/shi11"
+                style="@style/shi" />
+
+            <TextView style="@style/shitv" />
+
+            <ImageView
+                android:src="@mipmap/ge11"
+                style="@style/ge" />
+
+            <TextView style="@style/getv" />
+
+            <ImageView
+                android:src="@mipmap/he"
+                style="@style/he" />
+
+            <TextView style="@style/hetv" />
+
+            <RelativeLayout style="@style/herlayout">
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="37.3">
+
+            <ImageView
+                android:src="@mipmap/qian111"
+                style="@style/qian" />
+
+            <TextView style="@style/qiantv" />
+
+            <ImageView
+                android:src="@mipmap/bai11"
+                style="@style/bai" />
+
+            <TextView style="@style/baitv" />
+
+            <ImageView
+                android:src="@mipmap/shi1"
+                style="@style/shi" />
+
+            <TextView style="@style/shitv" />
+
+            <ImageView
+                android:src="@mipmap/ge11"
+                style="@style/ge" />
+
+            <TextView style="@style/getv" />
+
+            <ImageView
+                android:src="@mipmap/he"
+                style="@style/he" />
+
+            <TextView style="@style/hetv" />
+
+            <RelativeLayout style="@style/herlayout">
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5.5" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="33"
+            android:scaleType="center"
+            android:src="@mipmap/shengcheng" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.8" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="38"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@mipmap/kuaixuan" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:scaleType="fitEnd"
+            android:src="@mipmap/biaozhi_left" />
+    </LinearLayout>
+
 
 </LinearLayout>
