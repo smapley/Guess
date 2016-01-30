@@ -10,7 +10,7 @@ public class GetZhuangMode {
     private String pei;
     private String zhu;
     private String onlyid;
-    private String qx;
+    private int qx;
 
     public String getBiaoti() {
         return biaoti;
@@ -60,11 +60,11 @@ public class GetZhuangMode {
         this.onlyid = onlyid;
     }
 
-    public String getQx() {
+    public int getQx() {
         return qx;
     }
 
-    public void setQx(String qx) {
+    public void setQx(int qx) {
         this.qx = qx;
     }
 }

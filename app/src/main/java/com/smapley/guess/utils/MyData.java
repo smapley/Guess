@@ -27,5 +27,6 @@ public class MyData {
     public final static String URL_getZhuang=BASE_URL+"getZhuang.php";
     public final static String URL_updateZt1=BASE_URL+"updateZt1.php";
     public final static String URL_xiazhu=BASE_URL+"xiazhu.php";
+    public static final String URL_tuimaG3 = BASE_URL + "tuimaG3.php";
 
 }

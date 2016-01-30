@@ -73,7 +73,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:textColor="@color/white"
-                android:text="2314"
                 android:textSize="14sp"
                 android:lines="1"/>
 

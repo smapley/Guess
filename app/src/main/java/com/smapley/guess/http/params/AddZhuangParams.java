@@ -2,6 +2,7 @@ package com.smapley.guess.http.params;
 
 import com.smapley.guess.utils.MyData;
 
+import org.xutils.common.util.LogUtil;
 import org.xutils.http.RequestParams;
 
 /**
@@ -9,12 +10,15 @@ import org.xutils.http.RequestParams;
  */
 public class AddZhuangParams extends RequestParams {
 
-    public AddZhuangParams(String biaoti, String type, String dan, String pei,String mima) {
+    public AddZhuangParams(String user1,String biaoti, String type, String dan, String pei,String mima) {
         super(MyData.URL_addZhuang);
+        addBodyParameter("user1",user1);
         addBodyParameter("biaoti", biaoti);
         addBodyParameter("type", type);
         addBodyParameter("dan", dan);
         addBodyParameter("pei", pei);
-        addBodyParameter("mima", mima);
+        addBodyParameter("mi", mima);
+
+        LogUtil.d(toJSONString());
     }
 }

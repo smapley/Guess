@@ -53,6 +53,9 @@
             android:screenOrientation="landscape"
             android:theme="@style/FullscreenTheme" />
 
+        <activity android:name=".activity.AddZhuang"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullscreenTheme"/>
     </application>
 
 </manifest>

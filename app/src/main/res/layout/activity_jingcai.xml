@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/background4"
     android:orientation="vertical">
 
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/shuaxin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="40dp"
+        android:src="@mipmap/shuaxin" />
+
+    <ImageView
+        android:id="@+id/tianjia"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/shuaxin"
+        android:layout_marginRight="70dp"
+        android:src="@mipmap/tianjia" />
+
+    <LinearLayout
+        android:id="@+id/kuang1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/shuaxin"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@mipmap/kuang1"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:padding="20dp"
+            android:background="@mipmap/kuang2" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/shuaxin"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/jingcais" />
+</RelativeLayout>

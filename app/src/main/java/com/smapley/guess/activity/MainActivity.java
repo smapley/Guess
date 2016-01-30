@@ -1,9 +1,11 @@
 package com.smapley.guess.activity;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -13,8 +15,12 @@ import com.alibaba.fastjson.TypeReference;
 import com.smapley.guess.R;
 import com.smapley.guess.adapter.MainAdapter;
 import com.smapley.guess.http.params.GetJilu1Params;
+import com.smapley.guess.http.params.TuimaG3Params;
+import com.smapley.guess.http.params.UpdateZt1Params;
 import com.smapley.guess.http.params.XiaZhuParams;
 import com.smapley.guess.http.service.Getjilu1Service;
+import com.smapley.guess.http.service.TuimaG3Service;
+import com.smapley.guess.http.service.UpdateZt1Service;
 import com.smapley.guess.http.service.XiaZhuService;
 import com.smapley.guess.utils.MyData;
 
@@ -83,14 +89,16 @@ public class MainActivity extends BaseActivity {
 
     private MainAdapter adapter;
 
+    private String allid;
 
 
-    private Getjilu1Service getjilu1Service=new Getjilu1Service() {
+    private Getjilu1Service getjilu1Service = new Getjilu1Service() {
         @Override
         public void Succ(String data) {
             Map map1 = JSON.parseObject(data, new TypeReference<Map>() {
             });
             if (Integer.parseInt(map1.get("count").toString()) > 0) {
+                allid = map1.get("allid").toString();
 //                qishu = map1.get("qishu").toString();
 //                yyed = map1.get("yyed1").toString();
 //                tv_title2.setText(title + yyed);
@@ -103,6 +111,11 @@ public class MainActivity extends BaseActivity {
             } else if (Integer.parseInt(map1.get("count").toString()) == 0) {
                 dataList.clear();
                 adapter.notifyDataSetChanged();
+                try {
+                    allid = map1.get("allid").toString();
+                } catch (Exception e) {
+
+                }
 //                yyed = map1.get("yyed1").toString();
 //                tv_title2.setText(title + yyed);
 //                qishu = map1.get("qishu").toString();
@@ -110,7 +123,7 @@ public class MainActivity extends BaseActivity {
         }
     };
 
-    private XiaZhuService xiaZhuService=new XiaZhuService() {
+    private XiaZhuService xiaZhuService = new XiaZhuService() {
         @Override
         public void Succ(String data) {
             Map map = JSON.parseObject(data, new TypeReference<Map>() {
@@ -159,6 +172,42 @@ public class MainActivity extends BaseActivity {
         }
     };
 
+    private UpdateZt1Service updateZt1Service = new UpdateZt1Service() {
+        @Override
+        public void Succ(String data) {
+            Map resultmap = JSON.parseObject(data, new TypeReference<Map>() {
+            });
+            if (Integer.parseInt(resultmap.get("newid").toString()) > 0) {
+                //获取数据
+                getjilu1Service.load(new GetJilu1Params(MyData.user1));
+            }
+        }
+    };
+
+    private TuimaG3Service tuimaG3Service = new TuimaG3Service() {
+        @Override
+        public void Succ(String datas) {
+            removeList.clear();
+            String result2 = JSON.parseObject(datas, new TypeReference<String>() {
+            });
+            boolean isSucc = false;
+            for (int i = 0; i < result2.length(); i++) {
+                String data = result2.substring(i, i + 1);
+                if (data.equals("1")) {
+                    isSucc = true;
+                }
+            }
+            if (isSucc) {
+                showToast("退码成功！");
+                //获取数据
+                getjilu1Service.load(new GetJilu1Params(MyData.user1));
+            } else {
+                showToast("退码失败！");
+            }
+
+        }
+    };
+
     @Override
     protected void initParams() {
         if (sp_user.getBoolean("islogin", false)) {
@@ -184,14 +233,14 @@ public class MainActivity extends BaseActivity {
         //随便设置一个值
         textIco = num_ico;
         text = num;
-        MyData.user1=sp_user.getString("user1","");
-        MyData.mi=sp_user.getString("mi","");
+        MyData.user1 = sp_user.getString("user1", "");
+        MyData.mi = sp_user.getString("mi", "");
 
         //获取数据
         getjilu1Service.load(new GetJilu1Params(MyData.user1));
 
         //初始化列表
-        adapter=new MainAdapter(this,dataList);
+        adapter = new MainAdapter(this, dataList);
         listView.setAdapter(adapter);
 
     }
@@ -269,8 +318,30 @@ public class MainActivity extends BaseActivity {
                     jine = true;
                 }
                 break;
+            case R.id.numx:
+                if (text == num) {
+                    text.setText(text.getText().toString() + view.getTag().toString());
+                    if (text.getText().toString().length() >= 4) {
+                        text = gold;
+                        textIco.setVisibility(View.INVISIBLE);
+                        textIco = gold_ico;
+                        textIco.setVisibility(View.VISIBLE);
+                        jine = true;
+                    }
+                }
+                break;
+
+            case R.id.numqing:
+                updateZt1Service.load(new UpdateZt1Params(allid));
+                break;
+
             case R.id.numok:
                 xiaZhu();
+                textIco.setVisibility(View.INVISIBLE);
+                text = num;
+                textIco = num_ico;
+                text.setText("");
+                textIco.setVisibility(View.VISIBLE);
                 break;
 
             //倒的状态
@@ -342,17 +413,34 @@ public class MainActivity extends BaseActivity {
                 break;
 
             case R.id.tuima:
-
+                if (!removeList.isEmpty()) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    builder.setTitle("提示：");
+                    builder.setMessage("是否批量删除？");
+                    builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dialogInterface.dismiss();
+                            tuimaG3Service.load(new TuimaG3Params(MyData.user1, MyData.mi, removeList));
+                        }
+                    });
+                    builder.setNegativeButton("取消", null);
+                    Dialog dialog = builder.create();
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.show();
+                } else {
+                    showToast("没有码可以退！");
+                }
                 break;
             case R.id.shengcheng:
                 shengCheng();
                 break;
 
             case R.id.mingxi:
-                startActivity(new Intent(MainActivity.this,MingXi.class));
+                startActivity(new Intent(MainActivity.this, MingXi.class));
                 break;
             case R.id.jingcai:
-                startActivity(new Intent(MainActivity.this,JingCai.class));
+                startActivity(new Intent(MainActivity.this, JingCai.class));
                 break;
         }
     }
@@ -362,16 +450,16 @@ public class MainActivity extends BaseActivity {
     }
 
     private void xiaZhu() {
-        String number=num.getText().toString();
-        String money=gold.getText().toString();
-        String tag=type.getText().toString();
-        xiaZhuService.load(new XiaZhuParams(MyData.user1,MyData.mi,number,money,tag));
+        String number = num.getText().toString();
+        String money = gold.getText().toString();
+        String tag = type.getText().toString();
+        xiaZhuService.load(new XiaZhuParams(MyData.user1, MyData.mi, number, money, tag));
 
     }
 
 
     public static void check(Map<String, String> map) {
-        if(!removeList.remove(map)){
+        if (!removeList.remove(map)) {
             removeList.add(map);
         }
     }

@@ -16,8 +16,8 @@ public abstract class SimpleCallback implements Callback.CommonCallback<String> 
 
     @Override
     public void onSuccess(String result) {
-        Success(result);
         LogUtil.d(result);
+        Success(result);
     }
 
     @Override
