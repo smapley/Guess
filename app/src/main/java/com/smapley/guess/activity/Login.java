@@ -23,6 +23,9 @@ import org.xutils.view.annotation.ViewInject;
 public class Login extends BaseActivity {
 
 
+    @ViewInject(R.id.layout)
+    private View layout;
+
     @ViewInject(R.id.log_bt_send)
     private Button log_bt_send;
     @ViewInject(R.id.log_et_username)
@@ -70,6 +73,11 @@ public class Login extends BaseActivity {
         initView();
     }
 
+    @Override
+    protected View FullScreen() {
+        return layout;
+    }
+
     public void initView() {
         log_et_password.setText(log_st_password);
         log_et_username.setText(log_st_usernmae);
@@ -88,27 +96,23 @@ public class Login extends BaseActivity {
 
 
     public void checkLogin(View view) {
-        if (log_et_password.getText().toString().equals("0000")) {
-            log_st_usernmae=log_et_username.getText().toString();
-            afterLogin();
-        } else {
-            if (log_st_usernmae != null && !log_st_usernmae.equals("")) {
-                log_st_password = log_et_password.getText().toString();
-                if (log_st_password != null && !log_st_password.equals("")) {
-                    reg1Service.load(new Reg1Params(log_st_usernmae, log_st_password));
-                } else {
-                    showToast(R.string.log_null_password);
-                }
+        if (log_st_usernmae != null && !log_st_usernmae.equals("")) {
+            log_st_password = log_et_password.getText().toString();
+            if (log_st_password != null && !log_st_password.equals("")) {
+                reg1Service.load(new Reg1Params(log_st_usernmae, log_st_password));
             } else {
-                showToast(R.string.log_null_username);
+                showToast(R.string.log_null_password);
             }
+        } else {
+            showToast(R.string.log_null_username);
         }
     }
 
 
     private void afterLogin() {
         SharedPreferences.Editor editor = sp_user.edit();
-        editor.putString("phone", log_st_usernmae);
+        editor.putString("user1", log_st_usernmae);
+        editor.putString("mi", log_st_password);
         editor.putBoolean("islogin", true);
         editor.commit();
         toNextActivity();

@@ -5,7 +5,8 @@ package com.smapley.guess.utils;
  */
 public class MyData {
 
-
+    public static String user1;
+    public static String mi;
 
     public static final String SP_USER = "user";
 
@@ -25,5 +26,6 @@ public class MyData {
     public final static String URL_getJilu1=BASE_URL+"getJilu1.php";
     public final static String URL_getZhuang=BASE_URL+"getZhuang.php";
     public final static String URL_updateZt1=BASE_URL+"updateZt1.php";
+    public final static String URL_xiazhu=BASE_URL+"xiazhu.php";
 
 }

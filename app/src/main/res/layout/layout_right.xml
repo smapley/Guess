@@ -1,235 +1,289 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/background2"
-    android:orientation="vertical"
     tools:showIn="@layout/activity_main">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="7"
-        android:orientation="horizontal">
-
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="99"
+            android:scaleType="fitEnd"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2.5" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="204"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="72">
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="87"
-                    android:src="@mipmap/numx" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.5" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="56.5"
-                    android:src="@mipmap/num0" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.5" />
-
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="54"
-                    android:src="@mipmap/numo" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="55"
-                android:orientation="horizontal">
-
-                <TextView style="@style/num1" />
-
-                <ImageView
-                    style="@style/num2"
-                    android:src="@mipmap/num1" />
-
-                <TextView style="@style/num3" />
-
-                <ImageView
-                    style="@style/num4"
-                    android:src="@mipmap/num2" />
-
-                <TextView style="@style/num5" />
-
-                <ImageView
-                    style="@style/num6"
-                    android:src="@mipmap/num3" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="49">
-
-                <TextView style="@style/num1" />
-
-                <ImageView
-                    style="@style/num2"
-                    android:src="@mipmap/num4" />
-
-                <TextView style="@style/num3" />
-
-                <ImageView
-                    style="@style/num4"
-                    android:src="@mipmap/num5" />
-
-                <TextView style="@style/num5" />
-
-                <ImageView
-                    style="@style/num6"
-                    android:src="@mipmap/num6" />
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="52">
-
-                <TextView style="@style/num1" />
-
-                <ImageView
-                    style="@style/num2"
-                    android:src="@mipmap/num7" />
-
-                <TextView style="@style/num3" />
-
-                <ImageView
-                    style="@style/num4"
-                    android:src="@mipmap/num8" />
-
-                <TextView style="@style/num5" />
-
-                <ImageView
-                    style="@style/num6"
-                    android:src="@mipmap/num9" />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3" />
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="28"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.2" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@mipmap/xian" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:src="@mipmap/daos" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.3" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3" />
+            android:layout_weight="516"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.1">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@mipmap/que"
-                android:layout_marginEnd="5dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:src="@mipmap/ding" />
+                android:layout_weight="2.5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="204"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="72">
+
+                    <ImageView
+                        android:id="@+id/numx"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="89"
+                        android:src="@mipmap/numx" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <ImageView
+                        android:id="@+id/num0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="55.5"
+                        android:src="@mipmap/num0"
+                        android:tag="0"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+
+                    <ImageView
+                        android:id="@+id/numo"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="54"
+                        android:src="@mipmap/numo" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="55"
+                    android:orientation="horizontal">
+
+                    <TextView style="@style/num1" />
+
+                    <ImageView
+                        android:id="@+id/num1"
+                        style="@style/num2"
+                        android:src="@mipmap/num1"
+                        android:tag="1"/>
+
+                    <TextView style="@style/num3" />
+
+                    <ImageView
+                        android:id="@+id/num2"
+                        style="@style/num4"
+                        android:tag="2"
+                        android:src="@mipmap/num2" />
+
+                    <TextView style="@style/num5" />
+
+                    <ImageView
+                        android:id="@+id/num3"
+                        style="@style/num6"
+                        android:tag="3"
+                        android:src="@mipmap/num3" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="49">
+
+                    <TextView style="@style/num1" />
+
+                    <ImageView
+                        android:id="@+id/num4"
+                        style="@style/num2"
+                        android:tag="4"
+                        android:src="@mipmap/num4" />
+
+                    <TextView style="@style/num3" />
+
+                    <ImageView
+                        android:id="@+id/num5"
+                        android:tag="5"
+                        style="@style/num4"
+                        android:src="@mipmap/num5" />
+
+                    <TextView style="@style/num5" />
+
+                    <ImageView
+                        android:id="@+id/num6"
+                        android:tag="6"
+                        style="@style/num6"
+                        android:src="@mipmap/num6" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="52">
+
+                    <TextView style="@style/num1" />
+
+                    <ImageView
+                        android:id="@+id/num7"
+                        android:tag="7"
+                        style="@style/num2"
+                        android:src="@mipmap/num7" />
+
+                    <TextView style="@style/num3" />
+
+                    <ImageView
+                        android:id="@+id/num8"
+                        android:tag="8"
+                        style="@style/num4"
+                        android:src="@mipmap/num8" />
+
+                    <TextView style="@style/num5" />
+
+                    <ImageView
+                        android:id="@+id/num9"
+                        android:tag="9"
+                        style="@style/num6"
+                        android:src="@mipmap/num9" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="28"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2" />
+
+                <ImageView
+                    android:id="@+id/numxian"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/xian" />
+
+                <ImageView
+                    android:id="@+id/numdao"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/daos" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.3" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+
+            <LinearLayout
+                android:id="@+id/numok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="11"
+                android:padding="3dp"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/que" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ding" />
+            </LinearLayout>
 
 
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:src="@mipmap/qing" />
+            <ImageView
+                android:id="@+id/numqing"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:paddingRight="7dp"
+                android:paddingBottom="2dp"
+                android:scaleType="fitEnd"
+                android:src="@mipmap/qing" />
 
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>

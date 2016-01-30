@@ -8,25 +8,37 @@
     tools:showIn="@layout/activity_main">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="38.1">
+        android:layout_weight="38.1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/tuima"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_centerVertical="true"
-            android:layout_margin="4dp"
+            android:layout_weight="6"
+            android:paddingLeft="3dp"
+            android:paddingRight="6dp"
+            android:scaleType="fitCenter"
             android:src="@mipmap/tuima" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:scaleType="fitEnd"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
             android:src="@mipmap/biaozhi" />
-    </RelativeLayout>
+    </LinearLayout>
 
 
     <LinearLayout
@@ -46,11 +58,12 @@
             android:layout_weight="38.1">
 
             <ImageView
+                android:id="@+id/dao1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="41.5"
                 android:scaleType="fitXY"
-                android:src="@mipmap/dao1s" />
+                android:src="@mipmap/dao1" />
 
             <TextView
                 android:layout_width="0dp"
@@ -58,11 +71,12 @@
                 android:layout_weight="1" />
 
             <ImageView
+                android:id="@+id/dao2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="38.5"
                 android:scaleType="fitXY"
-                android:src="@mipmap/dao2s" />
+                android:src="@mipmap/dao2" />
 
             <TextView
                 android:layout_width="0dp"
@@ -70,6 +84,7 @@
                 android:layout_weight="1.8" />
 
             <ImageView
+                android:id="@+id/dao3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="39.7"
@@ -82,11 +97,12 @@
                 android:layout_weight="2" />
 
             <ImageView
+                android:id="@+id/dao4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="40.1"
                 android:scaleType="fitXY"
-                android:src="@mipmap/dao3s" />
+                android:src="@mipmap/dao3" />
         </LinearLayout>
 
         <TextView
@@ -112,32 +128,36 @@
             android:layout_weight="36.9">
 
             <ImageView
-                android:src="@mipmap/qian11"
-                style="@style/qian" />
+                android:id="@+id/qian1"
+                style="@style/qian"
+                android:src="@mipmap/qian1" />
 
             <TextView style="@style/qiantv" />
 
             <ImageView
-                android:src="@mipmap/bai11"
-                style="@style/bai" />
+                android:id="@+id/bai1"
+                style="@style/bai"
+                android:src="@mipmap/bai1" />
 
             <TextView style="@style/baitv" />
 
             <ImageView
-                android:src="@mipmap/shi1"
-                style="@style/shi" />
+                android:id="@+id/shi1"
+                style="@style/shi"
+                android:src="@mipmap/shi1" />
 
             <TextView style="@style/shitv" />
 
             <ImageView
-                android:src="@mipmap/ge11"
-                style="@style/ge" />
+                android:id="@+id/ge1"
+                style="@style/ge"
+                android:src="@mipmap/ge1" />
 
             <TextView style="@style/getv" />
 
             <ImageView
-                android:src="@mipmap/he"
-                style="@style/he" />
+                style="@style/he"
+                android:src="@mipmap/he" />
 
             <TextView style="@style/hetv" />
 
@@ -157,32 +177,36 @@
             android:layout_weight="34.4">
 
             <ImageView
-                android:src="@mipmap/qian11"
-                style="@style/qian" />
+                android:id="@+id/qian2"
+                style="@style/qian"
+                android:src="@mipmap/qian1" />
 
             <TextView style="@style/qiantv" />
 
             <ImageView
-                android:src="@mipmap/bai1"
-                style="@style/bai" />
+                android:id="@+id/bai2"
+                style="@style/bai"
+                android:src="@mipmap/bai1" />
 
             <TextView style="@style/baitv" />
 
             <ImageView
-                android:src="@mipmap/shi11"
-                style="@style/shi" />
+                android:id="@+id/shi2"
+                style="@style/shi"
+                android:src="@mipmap/shi1" />
 
             <TextView style="@style/shitv" />
 
             <ImageView
-                android:src="@mipmap/ge11"
-                style="@style/ge" />
+                android:id="@+id/ge2"
+                style="@style/ge"
+                android:src="@mipmap/ge1" />
 
             <TextView style="@style/getv" />
 
             <ImageView
-                android:src="@mipmap/he"
-                style="@style/he" />
+                style="@style/he"
+                android:src="@mipmap/he" />
 
             <TextView style="@style/hetv" />
 
@@ -202,32 +226,36 @@
             android:layout_weight="37.3">
 
             <ImageView
-                android:src="@mipmap/qian111"
-                style="@style/qian" />
+                android:id="@+id/qian3"
+                style="@style/qian"
+                android:src="@mipmap/qian1" />
 
             <TextView style="@style/qiantv" />
 
             <ImageView
-                android:src="@mipmap/bai11"
-                style="@style/bai" />
+                android:id="@+id/bai3"
+                style="@style/bai"
+                android:src="@mipmap/bai1" />
 
             <TextView style="@style/baitv" />
 
             <ImageView
-                android:src="@mipmap/shi1"
-                style="@style/shi" />
+                android:id="@+id/shi3"
+                style="@style/shi"
+                android:src="@mipmap/shi1" />
 
             <TextView style="@style/shitv" />
 
             <ImageView
-                android:src="@mipmap/ge11"
-                style="@style/ge" />
+                android:id="@+id/ge3"
+                style="@style/ge"
+                android:src="@mipmap/ge1" />
 
             <TextView style="@style/getv" />
 
             <ImageView
-                android:src="@mipmap/he"
-                style="@style/he" />
+                style="@style/he"
+                android:src="@mipmap/he" />
 
             <TextView style="@style/hetv" />
 
@@ -242,6 +270,7 @@
             android:layout_weight="5.5" />
 
         <ImageView
+            android:id="@+id/shengcheng"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="33"
@@ -266,12 +295,12 @@
             android:layout_weight="1"
             android:scaleType="center"
             android:src="@mipmap/kuaixuan" />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2.5"
-            android:scaleType="fitEnd"
-            android:src="@mipmap/biaozhi_left" />
+            android:scaleType="fitEnd"/>
     </LinearLayout>
 
 
